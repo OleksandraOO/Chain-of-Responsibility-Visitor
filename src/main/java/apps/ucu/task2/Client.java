@@ -12,10 +12,8 @@ public class Client {
     private final int age;
     private final String sex;
 
-    @Builder
     public Client(String name, int age, String sex) {
         this.id = idCounter++;
-        this.name = name;
         this.age = age;
         this.sex = sex;
     }
