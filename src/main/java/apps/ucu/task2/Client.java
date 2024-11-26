@@ -14,7 +14,9 @@ public class Client {
 
     public Client(String name, int age, String sex) {
         this.id = idCounter++;
+        this.name = name;
         this.age = age;
         this.sex = sex;
     }
+    
 }
