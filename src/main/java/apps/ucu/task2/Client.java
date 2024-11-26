@@ -3,20 +3,19 @@ package apps.ucu.task2;
 import lombok.Builder;
 import lombok.Getter;
 
-@Builder
-@Getter
-public class Client {
-    private static int idCounter = 0;
-    private final int id;
-    private final String name;
-    private final int age;
-    private final String sex;
+import java.util.concurrent.atomic.AtomicInteger;
 
-    public Client(String name, int age, String sex) {
-        this.id = idCounter++;
-        this.name = name;
-        this.age = age;
-        this.sex = sex;
-    }
-    
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@Builder
+@Data
+public class Client {
+    private static AtomicInteger counter = new AtomicInteger();
+
+    private final int id = counter.incrementAndGet();
+    private String name;
+    private int age;
+    private String sex;
+
 }
