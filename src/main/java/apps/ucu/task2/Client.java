@@ -2,6 +2,7 @@ package apps.ucu.task2;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Data;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
